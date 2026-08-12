@@ -1,0 +1,13 @@
+from sklearn.neighbors import KNeighborsClassifier
+
+# Dataset: Hours Studied, Attendance
+X = [[2,50],[3,55],[4,60],[5,70],[6,75],[7,80]]
+y = ['Fail','Fail','Fail','Pass','Pass','Pass']
+
+# Create and train KNN
+model = KNeighborsClassifier(n_neighbors=3)
+model.fit(X, y)
+
+# Prediction
+test = [[5,68]]
+print("Prediction:", model.predict(test)[0])
